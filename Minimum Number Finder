@@ -1,0 +1,18 @@
+print('!* To Find Minimum Number from List')
+def Minimum_Number():
+    arr = []
+    n = input('How many numbers in your array')
+    i=n
+    print('Enter array elements')
+    while(n != 0):
+        c = input()
+        arr.append(c)
+        n = n - 1
+    min = arr[0]
+
+    while(n != i):
+        if(min > arr[n]):
+            min = arr[n]
+        n = n + 1
+
+    print('Minimum value from the list is %d' %min)
