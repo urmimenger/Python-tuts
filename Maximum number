@@ -1,0 +1,18 @@
+print('!* To Find Maximum Number from List')
+def Maximum_Number():
+    arr = []
+    n = input('How many numbers in your array')
+    i=n
+    print('Enter array elements')
+    while(n != 0):
+        c = input()
+        arr.append(c)
+        n = n - 1
+    max = arr[0]
+
+    while(n != i):
+        if(max < arr[n]):
+            max = arr[n]
+        n = n + 1
+
+    print('Maximum value from the list is %d' %max)
