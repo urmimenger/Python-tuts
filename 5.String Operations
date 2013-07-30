@@ -1,0 +1,38 @@
+#!/usr/bin/python
+ 
+# Use brackets for string subscripting and substrings.
+bozon = 'Cheer for Friday'
+#        0123456789012345
+ 
+# Index at zero.
+print bozon[0], bozon[1], bozon[15]
+ 
+# You may not use [] on the left of an assignment, however.
+ 
+# Use the colon to describe ranges.  The last character is not part of the
+# range.
+print bozon[0:5] + ", " + bozon[0:6] + bozon[10:16] + '!'
+ 
+# Defaults to first and last.
+print bozon[:5] + ", " + bozon[:6] + bozon[10:] + '!'
+ 
+# The * operator repeats strings (like x in perl).
+print bozon[:6] * 3 + '!'
+ 
+# Negatives index back from the right, the rightmost character being -1.
+print bozon[-1] + ' ' + bozon[-10:-6]
+ 
+ 
+ 
+#you can think of a negative index, s[-4], as a shorthand for the equivalent s[len(s)-4].
+#The [n] operation is called indexing, and the [n:m] is called slicing. Both operations return a new string, 
+#leaving the original unchanged. Since python strings are immutable, 
+#you cannot use an index or slice expression on the left of an assignment. 
+#Note that immutability means you cannot update an existing value, but you can, of course, 
+#change a variable to a new value. For instance:
+ 
+#fred[1] = 'Q'
+ 
+#is illegal, but you can do this instead:
+ 
+#fred = fred[0] + 'Q' + fred[2:]
